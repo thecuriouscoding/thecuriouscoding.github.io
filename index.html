@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CuriousCoding</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      overflow: hidden; /* Ensures no scrollbars */
+      background-color: #87CEFA; /* Sky blue background */
+    }
+
+    /* Cylinder shape with darker blue shade */
+    .cylinder {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300%;
+      height: 150%;
+      background: linear-gradient(90deg, #4682B4, #1E90FF); /* Darker blue gradient to simulate a 3D cylinder */
+      border-radius: 50%; /* Makes it rounded like a cylinder */
+      transform: translate(-50%, -50%) rotate(0deg);
+      animation: rotateCylinder 20s linear infinite; /* Continuous rotation */
+    }
+
+    @keyframes rotateCylinder {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg); /* Full rotation */
+      }
+    }
+
+    /* Centered content */
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #333;
+      z-index: 1; /* Ensures the content is in front of the cylinder */
+    }
+
+    .content img {
+      width: 250px; /* Adjust logo size */
+    }
+
+    .content h1 {
+      margin: 20px 0;
+      font-size: 1.5em;
+      color: #FF8C00; /* Orange color for the logo text */
+    }
+
+    .content p {
+      font-size: 1.2em;
+      color: #444;
+    }
+
+    .content p span {
+      font-weight: bold;
+      color: #FF4500; /* A bold orange for highlighting skills */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Rotating cylinder background -->
+  <div class="cylinder"></div>
+
+  <!-- Main content: logo and text -->
+  <div class="content">
+    <img src="logo.png" alt="CuriousCoding Logo">
+    <h1>CuriousCoding.in</h1>
+    <p>Connect at <a href="mailto:connectwithcuriouscoding@gmail.com">connectwithcuriouscoding@gmail.com</a></p>
+    <p>for any freelancing work. We have expertise in <span>React</span>, <span>Node</span>, <span>Golang</span>, <span>Message Queues</span>, and <span>Caching</span>.</p>
+  </div>
+
+</body>
+</html>
